@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Editor</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="left-panel" class="panel">
+            <h1>Image Editor</h1>
+            <div id="canvas-container"></div>
+            <div id="dropzone">Drag and drop your image here</div>
+            <button id="download-button">Download image</button>
+        </div> 
+        <div id="right-panel" class="panel">
+            <label for="red-slider">Red</label>
+            <div class="container">
+                <input id="red-slider" type="range" min="-100" max="100" value="0">
+                <p id="red-slider-p">0</p>
+            </div>
+            <label for="green-slider">Green</label>
+            <div class="container">
+                <input id="green-slider" type="range" min="-100" max="100" value="0">
+                <p id="green-slider-p">0</p>
+            </div>
+            <label for="blue-slider">Blue</label>
+            <div class="container">
+                <input id="blue-slider" type="range" min="-100" max="100" value="0">
+                <p id="blue-slider-p">0</p>
+            </div>
+            <select id="preset-select">
+                <option value="none">None</option>
+                <option value="sc">Single Color</option>
+                <option value="grayscale">Grayscale</option>
+                <option value="bw">Black & White</option>
+                <option value="bubblegum">Bubblegum</option>
+            </select>
+            <div id="colored">
+                <p>Color</p>
+                <div id="color-box"></div>
+                <label for="tolerance-slider">Tolerance</label>
+                <div class="container">
+                    <input id="tolerance-slider" type="range" min="0" max="300" value="10">
+                    <p id="tolerance-slider-p">0</p>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/p5.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
